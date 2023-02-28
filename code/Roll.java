@@ -3,20 +3,23 @@ import java.util.Arrays;
 public class Roll {
 
    public static void main(String[] args) {
-        int n = args[0];
-        int k = args[1];
+        int n = Integer.parseInt(args[0]);
+        int k = Integer.parseInt(args[1]);
         
-        Dice dice = new Dice(6);
+        Dice dice = new Dice(k);
         
-        int[] rolls;
-        int sum;
+        int[] rolls = new int[n];
+        int sum = 0;
+        int currentRoll = 0;
 
-        for (int i = 0; i < k; i++) {
-            rolls[i] = dice.roll();
-            sum += dice.roll();
+        for (int i = 0; i < n; i++) {
+            currentRoll = dice.roll(); 
+            rolls[i] = currentRoll;
+            sum = sum + currentRoll;
         }
 
-        System.out.println(k + dice.toString() + ":" + sum + Arrays.toString(rolls));
+        System.out.print(n);
+        System.out.println(dice + " : " + sum + " " + Arrays.toString(rolls));
 
    } 
 }
