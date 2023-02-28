@@ -6,7 +6,7 @@ public class Roll {
         int n = Integer.parseInt(args[0]); //parseInt from String
         int k = Integer.parseInt(args[1]); //pareInt from String
         
-        Dice dice = new Dice(6);
+        Dice dice = new Dice(k); //changed parameter to k
         
         int[] rolls = new int[k];
         int sum = 0; //Sum set to 0
@@ -16,7 +16,8 @@ public class Roll {
             sum += dice.roll();
         }
 
-        System.out.println(k + dice.toStringMethod() + ": " + sum + Arrays.toString(rolls)); //changed to dice.toStringMethod
+        System.out.println(n + dice.toStringMethod() + ": " + sum + Arrays.toString(rolls)); //changed to dice.toStringMethod
+                                                                                            //changed k to n to produ e correct output
 
    } 
 }
