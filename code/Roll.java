@@ -13,7 +13,7 @@ public class Roll {
 
         for (int i = 0; i < k; i++) {
             rolls[i] = dice.roll();
-            sum += dice.roll();
+            sum += rolls[i];
         }
 
         System.out.println(n + dice.toStringMethod() + ": " + sum + Arrays.toString(rolls)); //changed to dice.toStringMethod
